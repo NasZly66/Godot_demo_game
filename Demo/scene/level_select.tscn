@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://beev8duv3kqh4"]
+
+[ext_resource type="Script" path="res://scene/level_select.gd" id="1_gd18i"]
+[ext_resource type="AudioStream" uid="uid://djvigqhl0kblx" path="res://asset/sfx/bg_music/27 - Chill.ogg" id="2_etd2t"]
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_gd18i")
+dir_path = "res://scene/levels"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 402.0
+offset_bottom = 227.0
+color = Color(0.565224, 0.724969, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 404.0
+offset_bottom = 227.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Select Level"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_etd2t")
+volume_db = -31.172
+autoplay = true

@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd6maarnvn678"]
+
+[ext_resource type="PackedScene" uid="uid://b7ctohd7caoun" path="res://scene/btn_level.tscn" id="2_30rmg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xq56r"]
+font_size = 25
+font_color = Color(0, 0.0529072, 0.0750414, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 401.0
+offset_bottom = 228.0
+color = Color(0.648584, 0.943816, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 399.0
+offset_bottom = 229.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Welcome to Dungeon"
+label_settings = SubResource("LabelSettings_xq56r")
+horizontal_alignment = 1
+
+[node name="BtnLevel" parent="MarginContainer/VBoxContainer" instance=ExtResource("2_30rmg")]
+layout_mode = 2
+text = "Start Game"
+level_path = "res://scene/level_select.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+autoplay = true

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7ctohd7caoun"]
+
+[ext_resource type="Script" path="res://scene/btn_level.gd" id="1_qe4ee"]
+
+[node name="BtnLevel" type="Button"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -277.0
+offset_bottom = -180.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Level 1"
+script = ExtResource("1_qe4ee")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
